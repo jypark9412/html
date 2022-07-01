@@ -48,7 +48,7 @@
 #myInfo a.first{color:#0073f0;font-weight:700;}
 #myInfo a:hover{background:#f7f8f8}
 
-.btn_search{width:22px;height:22px;position:absolute;right:0;top:6px;background:url('../images/ico_search.png') no-repeat center center;z-index:10;}
+.btn_search{width:22px;height:22px;position:absolute;right:0;top:6px;background:url('../images/ico_search.png') no-repeat center center;}
 #search_area{display:none;width:100%;position:absolute;left:0px;top:140px;background:#fafafa;z-index:5;}
 .search_box{width:1024px;margin:0 auto;}
 .search_form{padding-top:30px;border-bottom:1px solid #181818}
