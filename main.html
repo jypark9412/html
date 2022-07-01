@@ -15,13 +15,14 @@
         }
         setInterval(function(){ tick () }, 3000);
 
-        $(document).ready(function(){
-            $('.thumImg').hover(function(){
-                $('.snsShareList').css('display','block');
-            },function(){
-                $('.snsShareList').css('display','none');
-            }
-            );
+        $(function() {
+            var obj = $('.bookmark img');
+            $('.bookmark img').on('click', function(){
+                $('.bookmark img').each(function(){
+                    $(this).attr('src', $(this).attr('src').replace('_on.png', '_off.png'));
+                });
+                $(this).attr('src', $(this).attr('src').replace('_off.png', '_on.png'));
+            });
         });
     </script>
 </head>
@@ -48,7 +49,7 @@
                 <div class="search_form">
                     <form action="">
                         <input type="text" class="txt_search" value="검색어를 입력하세요">
-                        <input type="button" class="btn_search2" onclick="" value="">
+                        <input type="button" class="btn_search2" onclick="" value="닫기">
                     </form>
                 </div>
                 <!-- 최근 검색 결과 리스트 영역 -->
@@ -285,7 +286,7 @@
                                     <p class="point"><img src="images/point.png" alt="포인트"></p>
                                     <p class="bookmark">
                                         <a href="#">
-                                            <img src="images/icon_bookmark.png" alt="북마크">
+                                            <img src="images/icon_bookmark_off.png" alt="북마크">
                                         </a>
                                     </p>
                                 </div>
@@ -321,7 +322,7 @@
                                     <p class="point"><img src="images/point.png" alt="포인트"></p>
                                     <p class="bookmark">
                                         <a href="#">
-                                            <img src="images/icon_bookmark.png" alt="북마크">
+                                            <img src="images/icon_bookmark_off.png" alt="북마크">
                                         </a>
                                     </p>
                                 </div>
@@ -357,7 +358,7 @@
                                     <p class="point"><img src="images/point.png" alt="포인트"></p>
                                     <p class="bookmark">
                                         <a href="#">
-                                            <img src="images/icon_bookmark.png" alt="북마크">
+                                            <img src="images/icon_bookmark_off.png" alt="북마크">
                                         </a>
                                     </p>
                                 </div>
@@ -393,7 +394,7 @@
                                     <p class="point"><img src="images/point.png" alt="포인트"></p>
                                     <p class="bookmark">
                                         <a href="#">
-                                            <img src="images/icon_bookmark.png" alt="북마크">
+                                            <img src="images/icon_bookmark_off.png" alt="북마크">
                                         </a>
                                     </p>
                                 </div>
@@ -429,7 +430,7 @@
                                     <p class="point"><img src="images/point.png" alt="포인트"></p>
                                     <p class="bookmark">
                                         <a href="#">
-                                            <img src="images/icon_bookmark.png" alt="북마크">
+                                            <img src="images/icon_bookmark_off.png" alt="북마크">
                                         </a>
                                     </p>
                                 </div>
@@ -659,7 +660,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
@@ -697,7 +698,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
@@ -735,7 +736,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
@@ -773,7 +774,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
@@ -811,7 +812,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
@@ -849,7 +850,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
@@ -887,7 +888,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
@@ -925,7 +926,7 @@
                                 <p class="point"><img src="images/point.png" alt="포인트"></p>
                                 <p class="bookmark">
                                     <a href="#">
-                                        <img src="images/icon_bookmark.png" alt="북마크">
+                                        <img src="images/icon_bookmark_off.png" alt="북마크">
                                     </a>
                                 </p>
                             </div>
