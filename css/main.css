@@ -48,15 +48,22 @@
 #myInfo a.first{color:#0073f0;font-weight:700;}
 #myInfo a:hover{background:#f7f8f8}
 
-#search .btn_search{width:22px;height:22px;position:absolute;right:11%;top:111px;background:url('../images/ico_search.png') no-repeat center center;z-index:10;}
+.btn_search{width:22px;height:22px;position:absolute;right:0;top:6px;background:url('../images/ico_search.png') no-repeat center center;z-index:10;}
 #search_area{display:none;width:100%;position:absolute;left:0px;top:140px;background:#fafafa;z-index:5;}
 .search_box{width:1024px;margin:0 auto;}
 .search_form{padding-top:30px;border-bottom:1px solid #181818}
 .search_form .txt_search{width:90%;padding:10px 0;font-size:22px;border:0px;color:#1c2023;background:transparent;}
 .search_form .btn_search2{width:22px;height:22px;margin-left:56px;border:none;background:url('../images/ico_search.png') no-repeat center center;}
 .search_word{position:relative;margin-top:20px;}
+.search_lst{padding-bottom:32px;}
+.search_word strong{margin-top:20px}
 .search_word .btn_all_delete{position:absolute;right:0px;top:0px;padding:8px 20px;border:1px solid #1c2023;border-radius:4px;}
 .search_word .btn_all_delete a{font-size:12px;color:#181818}
+.search_lst{margin-top:16px;margin-bottom:36px}
+.search_lst p{float:left;margin:10px;font-size:12px;}
+.search_lst p:first-child{margin-left:0px}
+.sch_word:hover{background-color:#5a6670;}
+.sch_word .sch_delete{margin-left:10px;text-decoration:none;}
 
 #nav{position:relative;width:1024px;height:48px;margin:0 auto;display:flex;}
 .navList{height:48px;overflow:hidden;}
