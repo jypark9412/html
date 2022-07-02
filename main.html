@@ -16,7 +16,6 @@
         setInterval(function(){ tick () }, 3000);
 
         $(function() {
-            var obj = $('.bookmark img');
             $('.bookmark img').on('click', function(){
                 $('.bookmark img').each(function(){
                     $(this).attr('src', $(this).attr('src').replace('_on.png', '_off.png'));
@@ -25,6 +24,18 @@
             });
         });
 
+        $(document).ready(function(){
+                $("#nav_left").unbind();
+                $("#nav_left").bind("click", function(){           
+                    $("#nav_wrap").stop();
+                    $("#nav_wrap").animate({left:0}, 1000);
+                });
+                $("#nav_right").unbind();
+                $("#nav_right").bind("click", function(){
+                    $("#nav_wrap").stop();
+                    $("#nav_wrap").animate({left:-350}, 1000);
+                });
+        });
     </script>
 </head>
 <body>
@@ -77,8 +88,8 @@
                 <!-- 마이페이지 관리 영역-->
                 <div id="myMenu">
                     <div class="myMenuArea">
-                        <i class="icon_goldmedal"></i>
-                        <a href="#" class="myName" onclick="document.getElementById('user_lst').style.display='block';">
+                        <i class="icon_gold"></i>
+                        <a href="#" class="myName">
                             <span>홍길동</span>님
                         </a>
                     </div>
@@ -89,11 +100,11 @@
                     </div>
                 </div>
                 <div id="userRank">
-                    <ol id="userRnkList" class="tick">
+                    <ol id="userRnkList">
                         <li>
                             <a href="#">
                                 <p class="userRnkName">
-                                    <em class="hide">1</em>
+                                    <em class="hide icon_gold">1</em>
                                     <span>이름</span>
                                 </p>
                                 <p class="userRnkCash"><i class="icon"></i>0,000,000</p>
@@ -220,32 +231,34 @@
                 </div>
                 <a href="#" class="btn_search hide" onclick="document.getElementById('search_area').style.display='block';">검색</a>
             </div>
-            <nav>
-                <div id="nav">
-                    <ul class="navList">
-                        <li><a href="#"><span>메인</span></a></li>
-                        <li><a href="#"><span>쇼핑<em>BETA</em></span></a></li>
-                        <li><a href="#"><span>스토리</span></a></li>
-                        <li><a href="#"><span>유머</span></a></li>
-                        <li><a href="#"><span>응큼세포</span></a></li>
-                        <li><a href="#"><span>연예가화제</span></a></li>
-                        <li><a href="#"><span>사건사고</span></a></li>
-                        <li><a href="#"><span>정치</span></a></li>
-                        <li><a href="#"><span>경제</span></a></li>
-                        <li><a href="#"><span>사회</span></a></li>
-                        <li><a href="#"><span>아이돌</span></a></li>
-                        <li><a href="#"><span>연예</span></a></li>
-                        <li><a href="#"><span>반려동물</span></a></li>
-                        <li><a href="#"><span>스포츠</span></a></li>
-                        <li><a href="#"><span>해외축구</span></a></li>
-                        <li><a href="#"><span>해외야구</span></a></li>
-                        <li><a href="#"><span>꿀팁</span></a></li>
-                    </ul>
-                    <div class="nav_arrow">
-                        <a href="#" id="nav_left"></a>
-                        <a href="#" id="nav_right"></a>
-                    </div>                    
+            <nav style="border-bottom:1px solid #f7f8f8;">
+                <div id="navi">
+                    <div id="nav_wrap">
+                        <ul class="navList">
+                            <li><a href="#"><span>메인</span></a></li>
+                            <li><a href="#"><span>쇼핑<em>BETA</em></span></a></li>
+                            <li><a href="#"><span>스토리</span></a></li>
+                            <li><a href="#"><span>유머</span></a></li>
+                            <li><a href="#"><span>응큼세포</span></a></li>
+                            <li><a href="#"><span>연예가화제</span></a></li>
+                            <li><a href="#"><span>사건사고</span></a></li>
+                            <li><a href="#"><span>정치</span></a></li>
+                            <li><a href="#"><span>경제</span></a></li>
+                            <li><a href="#"><span>사회</span></a></li>
+                            <li><a href="#"><span>아이돌</span></a></li>
+                            <li><a href="#"><span>연예</span></a></li>
+                            <li><a href="#"><span>반려동물</span></a></li>
+                            <li><a href="#"><span>스포츠</span></a></li>
+                            <li><a href="#"><span>해외축구</span></a></li>
+                            <li><a href="#"><span>해외야구</span></a></li>
+                            <li><a href="#"><span>꿀팁</span></a></li>
+                        </ul>
+                    </div>             
                 </div>
+                <div class="nav_arrow">
+                    <a href="#" id="nav_left"></a>
+                    <a href="#" id="nav_right"></a>
+                </div>  
             </nav>
         </header>
         <section>
@@ -626,9 +639,7 @@
                 </div>
                 <div id="like_content">
                     <h3>선호하는 카테고리의 최신 콘텐츠</h3>
-                    <p class="btn_like_filter">
-                        <a href="#"><span>선호 카테고리 필터</span></a>
-                    </p>
+                    <p class="btn_like_filter"></p>
                     <p class="txt_content">내가 선호하는 카테고리의 최신 콘텐츠를 알려드려요.</p>
                     <div>
                         <ul class="like_cate_lst">
