@@ -24,6 +24,7 @@
                 $(this).attr('src', $(this).attr('src').replace('_off.png', '_on.png'));
             });
         });
+
     </script>
 </head>
 <body>
@@ -47,7 +48,7 @@
                 <!-- 검색 입력 영역 -->
                 <div class="search_form">
                     <form action="">
-                        <input type="text" class="txt_search" value="검색어를 입력하세요">
+                        <input type="text" class="txt_search" placeholder="검색어를 입력하세요">
                         <input type="button" class="btn_search2" value="">
                     </form>
                 </div>
@@ -76,8 +77,8 @@
                 <!-- 마이페이지 관리 영역-->
                 <div id="myMenu">
                     <div class="myMenuArea">
-                        <a href="#" class="myName">
-                            <i class="icon_goldmedal"></i>
+                        <i class="icon_goldmedal"></i>
+                        <a href="#" class="myName" onclick="document.getElementById('user_lst').style.display='block';">
                             <span>홍길동</span>님
                         </a>
                     </div>
@@ -240,7 +241,7 @@
                         <li><a href="#"><span>해외야구</span></a></li>
                         <li><a href="#"><span>꿀팁</span></a></li>
                     </ul>
-                    <div>
+                    <div class="nav_arrow">
                         <a href="#" id="nav_left"></a>
                         <a href="#" id="nav_right"></a>
                     </div>                    
